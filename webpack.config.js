@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -8,6 +9,13 @@ module.exports = {
   ],
   plugins: [
     new ExtractTextPlugin('styles.css'),
+    new CompressionPlugin({
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
+    })
   ],
   output: {
     path: path.resolve(__dirname, 'public'),
@@ -28,7 +36,8 @@ module.exports = {
       Clock: path.resolve(__dirname, 'app/components/ClockComponents/clock'),
       jQuery: 'jQuery/tmp/jquery',
       Form: path.resolve(__dirname, 'app/components/FormComponents/Form'),
-      FormInput: path.resolve(__dirname, 'app/components/FormComponents/FormInput')
+      FormInput: path.resolve(__dirname, 'app/components/FormComponents/FormInput'),
+
 
 
     },
