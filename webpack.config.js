@@ -7,8 +7,8 @@ module.exports = {
   entry: [
     './app/app.jsx'
   ],
-  // plugins: [
-  //   new ExtractTextPlugin('styles.css'),
+  plugins: [
+    new ExtractTextPlugin('styles.css'),
   //   new CompressionPlugin({
   //     asset: "[path].gz[query]",
   //     algorithm: "gzip",
