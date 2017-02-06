@@ -8,7 +8,7 @@ class Main extends React.Component {
 
     render() {
         return (
-
+          <div>
             <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
                 <Header title="COYAN"/>
                 <Drawer title="COYAN"/>
@@ -16,7 +16,7 @@ class Main extends React.Component {
                     <div className="page-content">{this.props.children}</div>
                 </main>
             </div>
-
+          </div>
         );
     }
 }

@@ -17,7 +17,7 @@ module.exports = {
     alias: {
       Main: path.resolve(__dirname,'app/components/Main'),
       applicationStyles: path.resolve(__dirname, 'app/styles/app.scss'),
-      reactMdlCss: 'material-design-lite/material.min.css',
+      reactMdlCss: 'material-design-lite/dist/material.min.css',
       Drawer: path.resolve(__dirname, 'app/components/MenuComponents/Drawer'),
       Header: path.resolve(__dirname, 'app/components/MenuComponents/Header'),
       HeaderLink: path.resolve(__dirname, 'app/components/MenuComponents/HeaderLink'),
@@ -25,6 +25,10 @@ module.exports = {
       Coyan: path.resolve(__dirname, 'app/components/Coyan'),
       StopWatch: path.resolve(__dirname, 'app/components/StopWatch'),
       CountDown: path.resolve(__dirname, 'app/components/CountDown'),
+      Clock: path.resolve(__dirname, 'app/components/ClockComponents/clock'),
+      jQuery: 'jQuery/tmp/jquery',
+      Form: path.resolve(__dirname, 'app/components/FormComponents/Form'),
+      FormInput: path.resolve(__dirname, 'app/components/FormComponents/FormInput')
 
 
     },
