@@ -13,6 +13,12 @@ class StopWatch extends React.Component {
         this.increment = null;
         this.contexto = this;
     }
+    componentWillUpdate(){
+      console.log("componentWillUpdate called");
+    }
+    componentDidUpdate() {
+      console.log("componentDidUpdate called");
+    }
     timeStringifyGenerator(timeInMiliSeconds) {
         let milliSeconds = timeInMiliSeconds % 1000;
         let seconds = Math.floor((timeInMiliSeconds / 1000)%60);

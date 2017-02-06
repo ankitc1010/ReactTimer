@@ -64,6 +64,12 @@ class CountDown extends React.Component {
     })
 
   }
+  componentWillUpdate(){
+    console.log("componentWillUpdate called");
+  }
+  componentDidUpdate() {
+    console.log("componentDidUpdate called");
+  }
   reset() {
     this.refs.numberField.value = null;
     this.setState({
